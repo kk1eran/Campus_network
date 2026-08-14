@@ -27,5 +27,4 @@ switchport access vlan 50
 no shutdown
 
 interrface f0/1
-switchport mode voice
 switchport voice vlan 80
