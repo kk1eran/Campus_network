@@ -1,3 +1,7 @@
+sw1 via F0/1 -> (switch port) Ip phone (PC port) -> (f/0) PC-6
+sw1 via F0/2 -> (f/0) PC-7
+sw1 via F0/3 -> (f/0) PC-8
+sw1 via F0/4 -> (port 0) AP2
 
 Device	IPv4 address	Subnet/Mask
 PC-6	10.10.1.1	/27 255.255.255.224
