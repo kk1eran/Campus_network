@@ -1,1 +1,31 @@
 
+sw1 via F0/1 -> (switch port) Ip phone (PC port) -> (f/0) PC-5
+sw1 via F0/2 -> (f/0) PC-4
+sw1 via F0/3 -> (f/0) PC-3
+sw1 via F0/4 -> (port 0) AP1
+
+Device	IPv4 address	Subnet/Mask
+PC-3	10.10.1.33	/27 255.255.255.224
+PC-4	10.10.1.34	/27 255.255.255.224
+PC-5	10.10.1.35	/27 255.255.255.224
+
+Sw1 initial config
+hostname S1
+enable secret class
+service password-encryption
+banner motd #Authorized Personnel Only!#
+line con 0
+password cisco
+login
+exit
+vlan 50
+name IT_Office
+
+interface f0/1-3
+switchport mode access
+switchport access vlan 50
+no shutdown
+
+interrface f0/1
+switchport mode voice
+switchport voice vlan 80
