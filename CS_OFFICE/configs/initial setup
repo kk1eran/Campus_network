@@ -7,3 +7,23 @@ Device	IPv4 address	Subnet/Mask
 PC-6	10.10.1.1	/27 255.255.255.224
 PC-7	10.10.1.2	/27 255.255.255.224
 PC-7	10.10.1.3	/27 255.255.255.224
+
+Sw2 initial config
+hostname S2
+enable secret class
+service password-encryption
+banner motd #Authorized Personnel Only!#
+line con 0
+password cisco
+login
+exit
+vlan 30
+name CS_Office
+
+interface f0/1-3
+switchport mode access
+switchport access vlan 30
+no shutdown
+
+interrface f0/1
+switchport voice vlan 80
