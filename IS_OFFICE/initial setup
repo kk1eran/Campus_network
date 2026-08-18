@@ -1,0 +1,17 @@
+SW3
+
+hostname SW3
+enable secret class
+service password-encryption
+banner motd #Authorized Personnel Only#
+
+line con 0
+password cisco
+login
+
+interface range f0/1-4
+switchport mode access
+switchport access vlan 40
+
+interface f0/1
+switchport voice vlan 80
