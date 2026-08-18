@@ -19,6 +19,8 @@ login
 exit
 vlan 30
 name CS_Office
+vlan 80
+name VOICE
 
 interface f0/1-4
 switchport mode access
