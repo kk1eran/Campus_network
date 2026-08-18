@@ -21,7 +21,7 @@ exit
 vlan 50
 name IT_Office
 
-interface f0/1-3
+interface f0/1-4
 switchport mode access
 switchport access vlan 50
 no shutdown
