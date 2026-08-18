@@ -20,6 +20,8 @@ login
 exit
 vlan 50
 name IT_Office
+vlan 80
+name VOICE
 
 interface f0/1-4
 switchport mode access
