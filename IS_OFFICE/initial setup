@@ -8,6 +8,10 @@ banner motd #Authorized Personnel Only#
 line con 0
 password cisco
 login
+vlan 40
+name IS_OFFICE
+vlan 80
+name VOICE
 
 interface range f0/1-4
 switchport mode access
