@@ -1,1 +1,16 @@
+SW5 configuration
+hostname SW5
+enable secret class
+service password-encryption
+banner motd #Authorized Personnel!#
+line con 0
+password cisco
+login
+exit
 
+interface range f0/1
+switchport mode access
+switchport access vlan 20
+
+vlan 20
+name STUDENTS
