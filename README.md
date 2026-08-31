@@ -1,6 +1,9 @@
 # Campus Network
 Network design and architecture for a school campus.
 
+continues documentation by date
+
+
 Firs thing to do is the physical cabling. Assign roles to each devices
 Connections
 
@@ -44,19 +47,33 @@ IT Office
 
 MLS0
 switches connected to MLS0
+
   SW1 -> (Fa0/3 - Fa0/1) -> MLS0
   SW0 -> (Fa0/5 - Fa0/2) -> MLS0
   SW2 -> (Fa0/5 - Fa0/3) -> MLS0
   SW5 -> (Fa0/2 - Fa0/4) -> MLS0
+routers
+  Router0 -> (Gig0/0/0 - G0/1) -> MLS0
+
+MLS0 <-> (G0/2 - G0/2) <-> MLS1
 
 MLS1
 switches connected to MLS1
   SW6 -> (Fa0/3 - Fa0/1) -> MLS1
   SW4 -> (Fa0/6 - Fa0/2) -> MLS1
   SW3 -> (Fa0/5 - Fa0/3) -> MLS1
+routers
+  Router1 -> (Gig0/0/0 - G0/1) -> MLS1
+
+31/08/2026
 
 AP4
   Smartphone -> (wireless connection) -> Access Point 4
+  Laptop -> (wireless connection) -> Access Point 4
+
+No shutdown Router0 and Router1 interface
+  interface
+
   
 
   
