@@ -191,6 +191,8 @@ Also applied vlan name
     name VOICE
     vlan 99
     name Native
+
+switch trunking is done next is MLS configuration.
   
   
     
