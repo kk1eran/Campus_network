@@ -3,6 +3,7 @@ Network design and architecture for a school campus.
 
 continues documentation by date
 
+PHASE 1
 
 Firs thing to do is the physical cabling. Assign roles to each devices
 Connections
@@ -48,8 +49,8 @@ IT Office
 MLS0
 switches connected to MLS0
 
-  SW1 -> (Fa0/3 - Fa0/1) -> MLS0
-  SW0 -> (Fa0/5 - Fa0/2) -> MLS0
+  SW0 -> (Fa0/3 - Fa0/1) -> MLS0
+  SW1 -> (Fa0/5 - Fa0/2) -> MLS0
   SW2 -> (Fa0/5 - Fa0/3) -> MLS0
   SW5 -> (Fa0/2 - Fa0/4) -> MLS0
 routers
@@ -72,8 +73,131 @@ AP4
   Laptop -> (wireless connection) -> Access Point 4
 
 No shutdown Router0 and Router1 interface
-  interface
+  interface g0/0/0
+  no shutdown
 
+initial switch configuration 
+vlan configuration 
+PC IP addressing
+  
+PHASE 2
+trunking a
+
+Switch Configuration
+Also applied vlan name
+
+  SW0 (Server)
+    interface Fa0/3
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10, 60, 99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 60
+    name Server
+    vlan 99
+    name Native
+    
+  SW1 (IT)
+    interface Fa0/5
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10,50,80,99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 50
+    name IT_Office
+    vlan 80
+    name VOICE
+    vlan 99
+    name Native
+
+  SW2 (CS)
+    interface Fa0/5
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10,30,80,99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 50
+    name IT_Office
+    vlan 80
+    name VOICE
+    vlan 99
+    name Native
+
+  SW5 (Lobby)
+    interface Fa0/2
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10,20,99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 20
+    name Student
+    vlan 99
+    name Native
+
+  SW6 (NOC)
+    interface Fa0/3
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10,70,80,99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 70
+    name NOC_System
+    vlan 80
+    name VOICE
+    vlan 99
+    name Native
+
+  SW4 (Lobby)
+    interface Fa0/5
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10,20,99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 20
+    name Student
+    vlan 99
+    name Native
+
+  SW3 (IS)
+    interface Fa0/5
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 10,70,80,99
+    no shutdown
+    exit
+    vlan 10
+    name MANAGEMENT
+    vlan 40
+    name IS_Office
+    vlan 80
+    name VOICE
+    vlan 99
+    name Native
+  
+  
+    
+    
+      
+  
+  
   
 
   
