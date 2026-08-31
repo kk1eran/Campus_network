@@ -54,7 +54,9 @@ switches connected to MLS1
   SW6 -> (Fa0/3 - Fa0/1) -> MLS1
   SW4 -> (Fa0/6 - Fa0/2) -> MLS1
   SW3 -> (Fa0/5 - Fa0/3) -> MLS1
-  
+
+AP4
+  Smartphone -> (wireless connection) -> Access Point 4
   
 
   
