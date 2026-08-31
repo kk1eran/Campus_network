@@ -86,6 +86,7 @@ trunking a
 Switch Configuration
 Also applied vlan name
 
+MLS0
   SW0 (Server)
     interface Fa0/3
     switchport mode trunk
@@ -146,6 +147,7 @@ Also applied vlan name
     vlan 99
     name Native
 
+MLS1
   SW6 (NOC)
     interface Fa0/3
     switchport mode trunk
@@ -193,6 +195,30 @@ Also applied vlan name
     name Native
 
 switch trunking is done next is MLS configuration.
+MLS configuration
+  MLS0
+    vlan 10
+    name MANAGEMENT
+    vlan 20
+    name Student
+    vlan 30
+    name CS_Office
+    vlan 40
+    name IS_Office
+    vlan 50
+    name IT_Office
+    vlan 60
+    name Server
+    vlan 70
+    name NOC
+    vlan 80
+    name VOICE
+    vlan 99
+    name Native
+    interface range
+https://docs.google.com/document/d/1_lI9K1x_SgvVjAj55p8ZLjp9e7xAjTCqIXTPLb9Fapo/edit?tab=t.0
+
+    (Continue on google docs)
   
   
     
